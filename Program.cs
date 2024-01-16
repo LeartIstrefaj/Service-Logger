@@ -1,6 +1,4 @@
-﻿
-
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NLog.Extensions.Logging;
@@ -11,12 +9,27 @@ namespace Service_Logging
     {
         static void Main(string[] args)
         {
-            var configFile = new ConfigurationBuilder().AddJsonFile("appsettings.json",false,true).Build();
+            IConfiguration configFile = new ConfigurationBuilder().AddJsonFile("appsettings.json",false,true).Build();
             
             var services = new ServiceCollection();
             services.AddLogging(
-                log => { log.ClearProviders(); log.AddNLog(); }
-                );
+                log => { log.ClearProviders(); log.AddNLog(); })
+
+                .AddSingleton(configFile)
+                .AddScoped<TestLogim>();
+                
+                ;
+
+
+            using (var serviceProvider = services.BuildServiceProvider())
+            {
+                var obj = serviceProvider.GetRequiredService<TestLogim>();
+                obj.Shenim();
+            }
+            
+
+
+            
         }
     }
 }

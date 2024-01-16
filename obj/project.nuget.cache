@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ATux5JS/okN304xGzVDxPTHtJEMM7m8clBt2h7MUHjAyhVSVPluCVGi9rf2u0KhCg5f6DKDwk+ql0OShTRwdOA==",
+  "dgSpecHash": "mH9zMEtIwZ+CURZ5yxalQRiE8fdRHzK8rcYl1QIR+rfUjnXr0CkaUO8fAFTpxBQWOfTTm0rT6mT760BXBcaYPA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Learta\\source\\repos\\Service_Logging\\Service_Logging.csproj",
+  "projectFilePath": "C:\\Users\\Learta\\Desktop\\C#\\workspace-project\\Service-Logger\\Service_Logging.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Learta\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\Learta\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

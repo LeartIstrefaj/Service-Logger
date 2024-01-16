@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Learta\\source\\repos\\Service_Logging\\Service_Logging.csproj": {}
+    "C:\\Users\\Learta\\Desktop\\C#\\workspace-project\\Service-Logger\\Service_Logging.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Learta\\source\\repos\\Service_Logging\\Service_Logging.csproj": {
+    "C:\\Users\\Learta\\Desktop\\C#\\workspace-project\\Service-Logger\\Service_Logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Learta\\source\\repos\\Service_Logging\\Service_Logging.csproj",
+        "projectUniqueName": "C:\\Users\\Learta\\Desktop\\C#\\workspace-project\\Service-Logger\\Service_Logging.csproj",
         "projectName": "Service_Logging",
-        "projectPath": "C:\\Users\\Learta\\source\\repos\\Service_Logging\\Service_Logging.csproj",
+        "projectPath": "C:\\Users\\Learta\\Desktop\\C#\\workspace-project\\Service-Logger\\Service_Logging.csproj",
         "packagesPath": "C:\\Users\\Learta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Learta\\source\\repos\\Service_Logging\\obj\\",
+        "outputPath": "C:\\Users\\Learta\\Desktop\\C#\\workspace-project\\Service-Logger\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
