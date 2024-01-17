@@ -21,7 +21,8 @@ namespace Service_Logging
         public void Shenim()
         {
             var test = _configuration["Folderi"];
-            _logger.LogInformation($"writing in log-file:  {test}");
+            var email = _configuration.GetSection("EmailSettings")["Email"];
+            _logger.LogInformation($"writing in log-file:  {test} : {email}");
 
         }
     }
