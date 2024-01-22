@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NLog.Extensions.Logging;
+using Topshelf;
 
 namespace Service_Logging
 {
@@ -16,15 +17,23 @@ namespace Service_Logging
                 log => { log.ClearProviders(); log.AddNLog(); })
 
                 .AddSingleton(configFile)
-                .AddScoped<TestLogim>();
                 
                 ;
 
 
             using (var serviceProvider = services.BuildServiceProvider())
             {
-                var obj = serviceProvider.GetRequiredService<TestLogim>();
-                obj.Shenim();
+                HostFactory.Run(ser =>
+                {
+                    ser.SetServiceName("Service-Logging");
+                    ser.SetDisplayName("Service Logging");
+                    ser.SetDescription("Service Logging Project using .NET");
+                    ser.Service<Service>(s =>
+                    {
+                        s.WhenStarted(ss => ss.Start());
+                        s.WhenStopped(ss => ss.Stop());
+                    });
+                });
             }
             
 
