@@ -30,8 +30,9 @@ namespace Service_Logging
                     ser.SetDescription("Service Logging Project using .NET");
                     ser.Service<Service>(s =>
                     {
-                        s.WhenStarted(ss => ss.Start());
-                        s.WhenStopped(ss => ss.Stop());
+                        s.ConstructUsing(_ => new Service(serviceProvider));
+                        s.WhenStarted(async ss => await ss.Fillo());
+                        s.WhenStopped(ss => ss.Ndalo());
                     });
                 });
             }
