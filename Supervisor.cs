@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Service_Logging   
 {
+    [DisallowConcurrentExecution]
     public class Supervisor : IJob
     {
         //private readonly IProgramManager _manageri;
